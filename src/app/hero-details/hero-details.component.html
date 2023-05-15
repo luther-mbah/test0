@@ -1,0 +1,22 @@
+
+<div class="card" style="width: 17rem;">
+    <img [src]= "superhero.imgSrc" class="card-img-top" />
+    
+    <div  class="card-body">
+      <h5 class="card-title" [ngStyle]="{color: 'red'} ">{{superhero.name}}</h5>
+     <a routerLink="" (click)="addFavoris($event)" href="" class="btn  " [ngClass]= "{'btn-danger': !superhero.favorite, 'btn-secondary': superhero.favorite }"> 
+        <i *ngIf= "superhero.favorite === false; then fav else rem"></i>
+        <ng-template #fav>
+          <i class="bi bi-heart-fill"></i> 
+        </ng-template >
+        <ng-template #rem> 
+          <i class="bi bi-dash-circle"></i> 
+        </ng-template>
+      
+      </a>
+      <p class="card-text">description : {{superhero.description}}</p>
+      <p class="card-text">Favori : {{superhero.favorite}}</p>
+    </div>
+  </div>
+
+  

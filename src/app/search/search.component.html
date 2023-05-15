@@ -1,0 +1,11 @@
+<div class="row">
+   <div class="col-sm-10 offset-1">
+<form class="input-group mb-3 mt-3 " (submit)="formSubmit()">
+    <input [(ngModel)] ="mot" type="text"  name="mot" class="form-control">
+</form>
+    <span class="helper-text" data-success="right">{{errorText}}</span>
+  </div>
+</div>
+
+
+<app-hero-list></app-hero-list>
